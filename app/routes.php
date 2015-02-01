@@ -15,3 +15,12 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/sports/{sportId}', array('uses' => 'SportController@showList', 'as' => 'showCompetitionList'));
+Route::get('/competitions/{competitionId}', array('uses' => 'CompetitionController@showCompetition', 'as' => 'showCompetition'));
+
+Route::get('/sport', function()
+{
+	return Competition::with('sport')->get();
+
+});
