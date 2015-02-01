@@ -19,6 +19,12 @@ Route::get('/', function()
 Route::get('/sports/{sportId}', array('uses' => 'SportController@showList', 'as' => 'showCompetitionList'));
 Route::get('/competitions/{competitionId}', array('uses' => 'CompetitionController@showCompetition', 'as' => 'showCompetition'));
 
+
+Route::get('/player-stats/{playerId}', array('uses' => 'StatController@getPlayerStats', 'as' => 'playerStats'));
+Route::get('/game-stats/{playerId}', array('uses' => 'StatController@getGameStats', 'as' => 'gameStats'));
+
+
+
 Route::get('/sport', function()
 {
 	return Competition::with('sport')->get();
