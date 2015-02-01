@@ -20,7 +20,7 @@ class CreatePlayerStatTable extends Migration {
 			$table->integer('stat_type_id');
 			$table->integer('attempt');
 			$table->integer('success');
-			$table->integer('percentage');
+			$table->float('percentage');
 			$table->timestamps();
 		});
 	}

@@ -16,7 +16,8 @@ class CreatePlayerTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('team_id');			
-			$table->string('name');
+			$table->string('firstname');
+			$table->string('lastname');
 			$table->date('birthday');
 			$table->timestamps();
 		});

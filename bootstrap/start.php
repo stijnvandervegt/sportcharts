@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('stijn-notebook', 'iMac-van-Rick-Voorneveld-3.local'),
+	'local' => array('stijn-notebook', 'iMac-van-Rick-Voorneveld-3.local', 'parallels-Parallels-Virtual-Platform'),
 
 ));
 
